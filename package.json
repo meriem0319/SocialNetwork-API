@@ -1,0 +1,25 @@
+{
+  "name": "socialnetwork-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meriem0319/SocialNetwork-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meriem0319/SocialNetwork-API/issues"
+  },
+  "homepage": "https://github.com/meriem0319/SocialNetwork-API#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "mongodb": "^4.10.0",
+    "mongoose": "^6.6.5"
+  }
+}
