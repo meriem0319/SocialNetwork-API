@@ -1,34 +1,34 @@
 const userData = [
   {
-    userName: "jjRose",
+    username: "jjRose",
     email: "janerose@abcd.com",
   },
   {
-    userName: "aManifestor",
+    username: "aManifestor",
     email: "annaball@mail.com",
   },
   {
-    userName: "kpkp123",
+    username: "kpkp123",
     email: "keithp@json.com",
   },
   {
-    userName: "wonderfulAmy",
+    username: "wonderfulAmy",
     email: "amybaldwin@news.com",
   },
   {
-    userName: "eternalJack",
+    username: "eternalJack",
     email: "johnjack@hotmail.com",
   },
   {
-    userName: "someoneSaid",
+    username: "someoneSaid",
     email: "iamwhoiam@send.com",
   },
   {
-    userName: "oneJohn",
+    username: "oneJohn",
     email: "johncarl@msn.com",
   },
   {
-    userName: "weAreone",
+    username: "weAreone",
     email: "jessica@jspw.com",
   },
 ];
