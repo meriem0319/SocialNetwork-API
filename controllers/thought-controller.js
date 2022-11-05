@@ -8,7 +8,7 @@ const thoughtController = {
         select: "-__v",
       })
       .select("-__v")
-      .sort({ _id: -1 })
+      .sort({ createdAt: -1 })
       .then((dbThoughtData) => res.json(dbThoughtData))
       .catch((err) => {
         console.log(err);
@@ -23,10 +23,10 @@ const thoughtController = {
         select: "-__v",
       })
       .select("-__v")
-      .sort({ _id: -1 })
+      .sort({ createdAt: -1 })
       .then((dbThoughtData) => {
         if (!dbThoughtData) {
-          res.status(404).json({ message: "No thoughts found with that ID" });
+          res.status(404).json({ message: "No thoughts found with that Id!" });
           return;
         }
         res.json(dbThoughtData);
@@ -39,10 +39,10 @@ const thoughtController = {
 
   createThought(req, res) {
     Thought.create(req.body)
-      .then(({ _id }) => {
+      .then((dbThoughtData) => {
         return User.findByIdAndUpdate(
           { _id: req.body.userId },
-          { $addToSet: { thoughts: thought._id } },
+          { $addToSet: { thoughts: dbThoughtData._id } },
           { new: true }
         );
       })
@@ -120,11 +120,11 @@ const thoughtController = {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
       { $pull: { reactions: { reactionId: req.params.reactionId } } },
-      { new: true }
+      { new: true, runValidators: true }
     )
       .then((dbThoughtData) => {
         if (!dbThoughtData) {
-          res.status(404).json({ message: "No thanks!" });
+          res.status(404).json({ message: "No thought with that Id!" });
           return;
         }
         res.json(dbThoughtData);
